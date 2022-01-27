@@ -1,6 +1,4 @@
 "use strict";
-const pug = require("pug");
-const path = require("path");
 const puppeteer = require("puppeteer");
 
 const generatePDF = async (html = "") => {
@@ -25,17 +23,8 @@ const generatePDF = async (html = "") => {
 
 module.exports = {
   test: ({ strapi }) => ({
-    async index(ctx) {
-      const filePath = path.resolve(__dirname + "/templates/estimate.pug");
-      const pugText = pug.renderFile(filePath);
-      const pdfFile = await generatePDF(pugText);
-      ctx.set("Content-Type", "application/pdf");
-      ctx.body = pdfFile;
-    },
     async view(ctx) {
-      const filePath = path.resolve(__dirname + "/templates/estimate.pug");
-      const pugText = pug.renderFile(filePath);
-      ctx.body = pugText;
+      ctx.body = "wow";
     },
   }),
 };
