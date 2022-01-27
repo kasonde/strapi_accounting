@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estimates",
+  "info": {
+    "singularName": "estimate",
+    "pluralName": "estimates",
+    "displayName": "Estimate",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "component",
+      "repeatable": true,
+      "component": "products.product"
+    },
+    "name": {
+      "type": "string"
+    },
+    "number": {
+      "type": "integer"
+    },
+    "estimate_date": {
+      "type": "datetime"
+    },
+    "expiry_date": {
+      "type": "datetime"
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer"
+    },
+    "note": {
+      "type": "text"
+    },
+    "account": {
+      "type": "enumeration",
+      "enum": [
+        "PERSONAL",
+        "COMPANY"
+      ],
+      "default": "COMPANY",
+      "required": true
+    }
+  }
+}

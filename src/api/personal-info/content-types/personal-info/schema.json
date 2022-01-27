@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "personal_infos",
+  "info": {
+    "singularName": "personal-info",
+    "pluralName": "personal-infos",
+    "displayName": "Personal Info",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}
